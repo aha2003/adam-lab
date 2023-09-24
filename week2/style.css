@@ -154,6 +154,15 @@ main h3 {
     transition: background-color 0.3s;
 }
 
+#cta-p1 {
+    font-size: 17;
+    font-weight: lighter;
+
+}
+
+#cta-title {
+    text-transform: uppercase;
+}
 
 
 .cta-button:hover {
