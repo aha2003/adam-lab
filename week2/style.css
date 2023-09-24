@@ -164,13 +164,13 @@ main h3 {
     border-color: #000000;
 }
 
-#cta-p1 {
+.cta-p1 {
     font-size: 18px;
     font-weight: lighter;
 
 }
 
-#cta-title {
+.cta-title {
     text-transform: uppercase;
 }
 
