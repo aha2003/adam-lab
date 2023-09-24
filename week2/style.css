@@ -155,6 +155,7 @@ main h3 {
 
 #cta-title {
     text-transform: uppercase;
+    font-size: 2em;
 }
 
 .cta-button:hover {
