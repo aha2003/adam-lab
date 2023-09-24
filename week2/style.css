@@ -139,6 +139,7 @@ main h3 {
     padding: 20px;
     background-color: #a8866a;
     margin-top: 30px;
+    font-size: 30px;
 }
 
 .cta-button {
@@ -153,10 +154,7 @@ main h3 {
     transition: background-color 0.3s;
 }
 
-#cta-title {
-    text-transform: uppercase;
-    font-size: 35px;
-}
+
 
 .cta-button:hover {
     background-color: #0056b3;
