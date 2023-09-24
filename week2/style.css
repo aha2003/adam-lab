@@ -153,7 +153,9 @@ main h3 {
     transition: background-color 0.3s;
 }
 
-
+#cta-title {
+    text-transform: uppercase;
+}
 
 .cta-button:hover {
     background-color: #0056b3;
