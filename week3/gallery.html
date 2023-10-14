@@ -5,6 +5,63 @@
   <title>Gallery - Wanderlust Voyages</title>
   <link rel="stylesheet" href="style.css">
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slideshow-img {
+      vertical-align: middle;
+      width: 100%;
+      max-height: 400px; 
+    }
+
+    /* Position the image container (needed to position the left and right
+    arrows) */
+    .container {
+    position: relative;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+    display: none;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+    cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%; /* Center vertically */
+        width: auto;
+        padding: 16px;
+        margin-top: -30px; /* Half of the button's height */
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+    /*
    .gallery-container {
 	margin: 0 auto;
 	display: flex;
@@ -17,7 +74,7 @@
 	width: 24%;
 	margin-bottom: 20px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
+   } */
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -40,6 +97,44 @@
   <main class="services">
       <h1>Gallery</h1>
 
+      <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 8</div>
+            <img class="slideshow-img" src="images/1.jpeg" alt="Image 1">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 8</div>
+            <img class="slideshow-img" src="images/2.jpeg" alt="Image 2">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 8</div>
+            <img class="slideshow-img" src="images/3.jpeg" alt="Image 3">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 8</div>
+            <img class="slideshow-img" src="images/4.jpeg" alt="Image 4">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 8</div>
+            <img class="slideshow-img" src="images/5.jpeg" alt="Image 5">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">6 / 8</div>
+            <img class="slideshow-img" src="images/6.jpeg" alt="Image 6">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">7 / 8</div>
+            <img class="slideshow-img" src="images/7.jpeg" alt="Image 7">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">8 / 8</div>
+            <img class="slideshow-img" src="images/8.jpeg" alt="Image 8">
+        </div>
+
+        <a class="prev" >&#10094;</a>
+        <a class="next" >&#10095;</a>
+      </div>
+    <!--
 		<div class="gallery-container">
 			<img src="images/1.jpeg" alt="Spa Image 1">
 			<img src="images/2.jpeg" alt="Spa Image 2">
@@ -49,7 +144,7 @@
 			<img src="images/6.jpeg" alt="Spa Image 6">
 			<img src="images/7.jpeg" alt="Spa Image 7">
 			<img src="images/8.jpeg" alt="Spa Image 7">
-		</div>
+		</div>        -->
    <!-- Call to Action -->
    <section class="cta-container">
     <h2>Ready to Experience Our Services?</h2>
@@ -59,6 +154,7 @@
 
   </main>
   <footer>
+    
       <ul>
         <li><a href="https://www.facebook.com/">Facebook</a></li>
         <li><a href="https://twitter.com/">Twitter</a></li>
@@ -67,5 +163,8 @@
     <p >&copy; 2024 Wanderlust Voyages | Travel Agency. All rights reserved.</p>
   </footer>
  </div>
+
+
+ <script src="scripts/slideshow.js"></script>
 </body>
 </html>

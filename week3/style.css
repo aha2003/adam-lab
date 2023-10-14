@@ -1,17 +1,21 @@
 /* Reset Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #505050;
 }
 
 /* Header Styles */
 header {
-    background-color: #282689;
+    background-color: #6b411f;
     color: #fff;
     text-align: center;
     padding: 20px;
+    position: sticky;
+    top: 0;
 }
 
 .headeraH1 {
@@ -100,16 +104,17 @@ main h3 {
 }
 
 .service-column {
-    flex-basis: calc(25% - 20px);
-    max-width: calc(25% - 20px);
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
 }
 
 .service-column img {
-    width: 180px;
+    width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -137,24 +142,48 @@ main h3 {
 .cta-container {
     text-align: center;
     padding: 20px;
-    background-color: #f5f5f5;
-    margin-top: 30px;
+    background-color: #a8866a;
+    margin-top: 45px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    padding-top: 10px;
 }
 
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #505050;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 15px;
     transition: background-color 0.3s;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
 }
 
+.cta-p1 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: #ffffff;
+
+}
+
+.cta-title {
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #636060;
 }
 
 /* Footer Styles */
