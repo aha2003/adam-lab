@@ -36,9 +36,13 @@ function validateUsername() {
   const usernameValue = username.value.trim();
   if (usernameValue === '') {
     showError(usernameError, 'Username is required');
+    username.parentElement.classList.remove('success'); // Remove success class
+    username.parentElement.classList.add('error'); // Add success class
     return false;
   } else {
     showSuccess(usernameError);
+    username.parentElement.classList.remove('error'); // Add success class
+    username.parentElement.classList.add('success'); // Add success class
     return true;
   }
 }
@@ -48,12 +52,18 @@ function validateEmail() {
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   if (emailValue === '') {
     showError(emailError, 'Email is required');
+    email.parentElement.classList.remove('success'); // Remove success class
+    email.parentElement.classList.add('error'); // Add success class
     return false;
   } else if (!emailPattern.test(emailValue)) {
     showError(emailError, 'Enter a valid email address');
+    email.parentElement.classList.remove('success'); // Remove success class
+    email.parentElement.classList.add('error'); // Add success class
     return false;
   } else {
     showSuccess(emailError);
+    email.parentElement.classList.remove('error'); // Add success class
+    email.parentElement.classList.add('success'); // Add success class
     return true;
   }
 }
@@ -62,12 +72,18 @@ function validatePassword() {
   const passwordValue = password.value.trim();
   if (passwordValue === '') {
     showError(passwordError, 'Password is required');
+    password.parentElement.classList.remove('success'); // Remove success class
+    password.parentElement.classList.add('error'); // Add success class
     return false;
   } else if (passwordValue.length < 8) {
     showError(passwordError, 'Password must be at least 8 characters');
+    password.parentElement.classList.remove('success'); // Remove success class
+    password.parentElement.classList.add('error'); // Add success class
     return false;
   } else {
     showSuccess(passwordError);
+    password.parentElement.classList.remove('error'); // Add success class
+    password.parentElement.classList.add('success'); // Add success class
     return true;
   }
 }
@@ -76,15 +92,22 @@ function validateConfirmPassword() {
   const confirmPasswordValue = confirmPassword.value.trim();
   if (confirmPasswordValue === '') {
     showError(confirmPasswordError, 'Confirm Password is required');
+    confirmPassword.parentElement.classList.remove('success'); // Remove success class
+    confirmPassword.parentElement.classList.add('error'); // Add success class
     return false;
   } else if (confirmPasswordValue !== password.value.trim()) {
     showError(confirmPasswordError, "Passwords don't match");
+    confirmPassword.parentElement.classList.remove('success'); // Remove success class
+    confirmPassword.parentElement.classList.add('error'); // Add success class
     return false;
   } else {
     showSuccess(confirmPasswordError);
+    confirmPassword.parentElement.classList.remove('error'); // Add success class
+    confirmPassword.parentElement.classList.add('success'); // Add success class
     return true;
   }
 }
+
 
 function showError(element, message) {
   element.textContent = message;

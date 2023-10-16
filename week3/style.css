@@ -153,6 +153,7 @@ main h3 {
 
 /* Call to Action Styles */
 .cta-container {
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     background-color: #a8866a;
