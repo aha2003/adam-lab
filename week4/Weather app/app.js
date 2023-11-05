@@ -15,18 +15,24 @@ getWeatherButton.addEventListener('click', () => {
     return;
   }
 
-  // Step 5: Make an HTTP request to the OpenWeatherMap API to fetch the weather data.
-  const apiUrl = `api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}`;
+  // Step 5: Create an XMLHttpRequest object.
+  const xhr = new XMLHttpRequest();
 
-  fetch(apiUrl)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then((data) => {
-      // Step 7: Once the data is returned from the API, parse it and update the weather info div.
+  
+  // Step 6: Set the request method and URL.
+  xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`);
+
+
+  // Step 7: Set the request headers.
+  xhr.setRequestHeader('Accept', 'application/json');
+
+  // Step 8: Add an event listener to the xhr object to detect when the request is complete.
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // Step 9: Parse the JSON response data.
+      const data = JSON.parse(xhr.responseText);
+
+      // Step 10: Update the weather info div.
       const weatherDescription = data.weather[0].description;
       const mainTemp = data.main.temp;
       const windSpeed = data.wind.speed;
@@ -38,10 +44,13 @@ getWeatherButton.addEventListener('click', () => {
       `;
 
       weatherInfoContainer.innerHTML = weatherInfoHTML;
-    })
-    .catch((error) => {
-      // Step 6: Handle errors
-      console.error('Error:', error);
+    } else {
+      // Step 11: Handle errors.
+      console.error('Error:', xhr.statusText);
       alert('An error occurred. Please try again later.');
-    });
+    }
+  };
+
+  // Step 12: Send the request.
+  xhr.send();
 });
