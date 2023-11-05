@@ -16,7 +16,7 @@ getWeatherButton.addEventListener('click', () => {
   }
 
   // Step 5: Make an HTTP request to the OpenWeatherMap API to fetch the weather data.
-  const apiUrl = `api.openweathermap.org/data/2.5/forecast?q={cityName}&appid={apiKey}`;
+  const apiUrl = `api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}`;
 
   fetch(apiUrl)
     .then((response) => {
